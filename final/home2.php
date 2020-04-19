@@ -19,19 +19,21 @@ include('condb.php');
 </head>
 <body>
     <nav>
-    <form action="logout.php">
+    
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
         <label class="logo">TPC</label>
         <ul>
-            <li><a class="active" href="#">รายงานยอดขาย</a></li>
+            <li><a href="#">รายงานยอดขาย</a></li>
             <li><a href="#">ข้อมูลพนักงาน</a></li>
             <li><a href="#">จัดการเมนูอาหาร</a></li>
+            <form action="logout.php">
             <li><a input ="submit" href="#">Logout</a></li>
+            </form>
         </ul>
-		
+    
         
 
     </nav>

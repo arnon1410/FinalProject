@@ -26,12 +26,12 @@ include('condb.php');
         </label>
         <label class="logo">TPC</label>
         <ul>
-            <li><a class="active" href="#">รายงานยอดขาย</a></li>
+            <li><a href="#">รายงานยอดขาย</a></li>
             <li><a href="#">ข้อมูลพนักงาน</a></li>
             <li><a href="#">จัดการเมนูอาหาร</a></li>
             <li><a input ="submit" href="#">Logout</a></li>
         </ul>
-		
+    </form>
         
 
     </nav>
