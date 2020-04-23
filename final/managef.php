@@ -1,4 +1,4 @@
-<?php session_start();
+<?php session_start();  
 include('condb.php');
 
   $ID = $_SESSION['ID'];
@@ -14,25 +14,31 @@ include('condb.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">	    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    
 </head>
 <body>
     <nav>
+    
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
         <label class="logo">TPC®</label>
         <ul>
-        <li><a href="#">Sales report</a></li>
+            <li><a href="#">Sales report</a></li>
             <li><a href="employinfor.php">Manage employees</a></li>
-            <li><a href="managef.php">Food management</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a class="active" href="managef.php">Food management</a></li>
+            <li><a href="logout.php">Logout</a></li>      
         </ul>
+
     </nav>
-    <section></section>
+    <section>
+    </section>
+	
     
 </body>
 </html>

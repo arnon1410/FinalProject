@@ -19,15 +19,15 @@ session_start();
 
                       if($_SESSION["level"]=="staff"){ 
 
-                        Header("Location: staff.php");
+                        Header("Location: home.php");
                       }
                   if ($_SESSION["level"]=="admin"){ 
 
-                        Header("Location: admin.php");
+                        Header("Location: home2.php");
                       }
 					  if ($_SESSION["level"]=="manager"){ 
 
-                        Header("Location: manager.php");
+                        Header("Location: home3.php");
                       }
                   }else{
                     echo "<script>";
