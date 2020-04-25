@@ -258,7 +258,7 @@ if ($level != 'admin') {
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
-    <script>
+    <script type="text/javascript">
         $(document).ready(function() {
 
             $('#datatableid').DataTable({
@@ -303,7 +303,7 @@ if ($level != 'admin') {
     $(document).ready(function () {
         $('.editbtn').on('click',function() {
 
-            $('#deletemodal').modal('show');
+            $('#editmodal').modal('show');
 
                 $tr = $(this).closest('tr');
 

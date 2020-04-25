@@ -259,24 +259,6 @@ if ($level != 'manager') {
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-
-            $('#datatableid').DataTable({
-                "pagingType": "full_numbers",
-                "lengthMenu": [
-                    [10, 25, 50, -1],
-                    [10, 25, 50, "All"]
-                ],
-                responsive: true,
-                language: {
-                    search: "_INPUT_",
-                    searchPlaceholder: "Search Your Data",
-                }
-            });
-        });
-    </script>
-
-    <script>
     $(document).ready(function () {
         $('.deletebtn').on('click',function() {
 
@@ -303,7 +285,7 @@ if ($level != 'manager') {
     $(document).ready(function () {
         $('.editbtn').on('click',function() {
 
-            $('#deletemodal').modal('show');
+            $('#editmodal').modal('show');
 
                 $tr = $(this).closest('tr');
 

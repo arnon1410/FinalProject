@@ -7,17 +7,17 @@ $db = mysqli_select_db($con,'final');
 
 if(isset($_POST['insertdata']))
 {
-    $ProductID = $_POST['productid'];
-    $ProductName = $_POST['productName'];
-    $Price = $_POST['price'];
+    $productid = $_POST['productid'];
+    $productname = $_POST['productname'];
+    $price = $_POST['price'];
 
-    $sql="INSERT INTO products( `productid`,`productname`,`price`) VALUES ('$productid','$productname','$price')";
-    $result = mysqli_query($con,$sql);
+    $query="INSERT INTO products( `productid`,`productname`,`price`) VALUES ('$productid','$productname','$price')";
+    $query_run= mysqli_query($con,$query);
 
-    if($result)
+    if($query_run)
     {
         echo '<script> alert("Data Saved"); </script>';
-        header('Location: managef2.php');
+        header('Location: managef.php');
     }
     else
     {

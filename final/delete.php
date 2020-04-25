@@ -15,7 +15,7 @@ if(isset($_POST['deletedata']))
     if($result)
     {
         echo '<script> alert("Data Saved"); </script>';
-        header('Location: home2.php');
+        header('Location: employinfor.php');
     }
     else
     {

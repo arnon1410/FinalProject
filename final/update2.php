@@ -7,8 +7,8 @@ $db = mysqli_select_db($con,'final');
 
 if(isset($_POST['updatedata']))
 {
-    $productID = $_POST['productid'];
-    $productName = $_POST['productname'];
+    $productid = $_POST['productid'];
+    $productname = $_POST['productname'];
     $price = $_POST['price'];
 
     $sql= "UPDATE products SET productname='$productname', price='$price' WHERE productid='$productid' ";
@@ -17,7 +17,7 @@ if(isset($_POST['updatedata']))
     if($result)
     {
         echo '<script> alert("Data Saved"); </script>';
-        header('Location: managef2.php');
+        header('Location: managef.php');
     }
     else
     {

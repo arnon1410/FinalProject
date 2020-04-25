@@ -14,11 +14,13 @@ include('condb.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
+ 
 </head>
 <body>
     <nav>
@@ -31,7 +33,7 @@ include('condb.php');
         <ul>
             <li><a href="#">Sales report</a></li>
             <li><a href="employinfor2.php">Manage employees</a></li>
-            <li><a class="active" href="managef2.php">Food management</a></li>
+            <li><a class="active" href="managef.php">Food management</a></li>
             <li><a href="logout.php">Logout</a></li>      
         </ul>
 
@@ -72,7 +74,7 @@ include('condb.php');
 </div>
 
 
-<!-- ############################################################################################################# -->
+<!-- ####################################################################################################################################### -->
 <!-- Edit FORM -->
 <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -87,15 +89,15 @@ include('condb.php');
         <div class="modal-body">
         <div class="form-group">
                     <label>ProductID</label>
-                    <input type="text" name="productid" class="form-control" placeholder="Enter Productid">
+                    <input type="text" name="productid" id="productid" class="form-control" placeholder="Enter Productid">
                 </div>
                 <div class="form-group">
                     <label>ProductName</label>
-                    <input type="text" name="productname" class="form-control" placeholder="Enter productname">
+                    <input type="text" name="productname" id="productname" class="form-control" placeholder="Enter productname">
                 </div>
                 <div class="form-group">
                     <label>Price</label>
-                    <input type="text" name="price" class="form-control" placeholder="Enter price">
+                    <input type="text" name="price" id="price" class="form-control" placeholder="Enter price">
                 </div>
         </div>
         <div class="modal-footer">
@@ -106,7 +108,7 @@ include('condb.php');
         </div>
     </div>
 </div>
-<!--#######################################################################################################################-->
+<!--##########################################################################################################################################-->
 
 
 
@@ -137,7 +139,7 @@ include('condb.php');
         </div>
     </div>
 </div>
-<!--#######################################################################################################################-->
+<!--######################################################################################################################################-->
 
 
         <div class="container">
@@ -167,7 +169,7 @@ include('condb.php');
                         $query="SELECT * FROM products";
                         $result = mysqli_query($con,$query);
                     ?>
-                        <table id="datatableid" class="table table-dark">
+                        <table id="example" class="table table-dark">
                             <thead>
                                 <tr>
                                 <th scope="col">ProductID</th>
@@ -217,31 +219,7 @@ include('condb.php');
         </div>
 
     </section>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-
-            $('#datatableid').DataTable({
-                "pagingType": "full_numbers",
-                "lengthMenu": [
-                    [10, 25, 50, -1],
-                    [10, 25, 50, "All"]
-                ],
-                responsive: true,
-                language: {
-                    search: "_INPUT_",
-                    searchPlaceholder: "Search Your Data",
-                }
-            });
-        });
-    </script>
-
-    <script>
+<script>
     $(document).ready(function () {
         $('.deletebtn').on('click',function() {
 
@@ -261,14 +239,14 @@ include('condb.php');
         });
 
     });
-    </script>
+</script>
 
     
-    <script>
+<script>
     $(document).ready(function () {
         $('.editbtn').on('click',function() {
 
-            $('#deletemodal').modal('show');
+            $('#editmodal').modal('show');
 
                 $tr = $(this).closest('tr');
 
@@ -286,8 +264,9 @@ include('condb.php');
         });
 
     });
-    </script>
+</script>
 
 </body>
 
 </html>
+

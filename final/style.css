@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #30336b;
+    background: #55efc4;
 }
 
 nav {
@@ -107,5 +107,5 @@ a:hover {
 }
 
 section {
-    background: #30336b;
+    background: #55efc4;
 }

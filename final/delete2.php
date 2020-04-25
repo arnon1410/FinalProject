@@ -7,7 +7,7 @@ $db = mysqli_select_db($con,'final');
 
 if(isset($_POST['deletedata']))
 {
-    $ID = $_POST['delete_ID'];
+    $productid = $_POST['delete_ID'];
 
     $sql= "DELETE FROM products WHERE productid='$productid' ";
     $result = mysqli_query($con,$sql);
@@ -15,7 +15,7 @@ if(isset($_POST['deletedata']))
     if($result)
     {
         echo '<script> alert("Data Saved"); </script>';
-        header('Location: managef2.php');
+        header('Location: managef.php');
     }
     else
     {
