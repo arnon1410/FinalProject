@@ -14,7 +14,7 @@ include('condb.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">	    
+    <link rel="stylesheet" href="style1.css"> 
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
@@ -26,13 +26,23 @@ include('condb.php');
         </label>
         <label class="logo">TPC®</label>
         <ul>
+            <li><a class="active" href="home.php">HOME</a></li>
             <li><a href="#">Order food</a></li>
             <li><a href="#">Circulation</a></li>
-            <li><a href="#">Profile</a></li>
+            <li><a href="profile.php">Profile</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>
-    <section></section>
+    <section>
+    <div class="post">
+        <div class="post-s">
+            <h2>
+                WELCOME
+                  TO
+                THREE COFFE</h2>
+        </div>
+
+    </section>
     
 </body>
 </html>

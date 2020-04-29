@@ -14,8 +14,11 @@ session_start();
                       $row = mysqli_fetch_array($result);
 
                       $_SESSION["ID"] = $row["ID"];
-                      $_SESSION["name"] = $row["name"];
+                      $_SESSION["username"] = $row["username"];
+                      $_SESSION["password"] = $row["password"];
                       $_SESSION["level"] = $row["level"];
+                      $_SESSION["name"] = $row["name"];
+                      $_SESSION["gender"] = $row["gender"];
 
                       if($_SESSION["level"]=="staff"){ 
 

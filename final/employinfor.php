@@ -32,6 +32,7 @@ if ($level != 'admin') {
         </label>
         <label class="logo">TPC®</label>
         <ul>
+            <li><a  href="home2.php">HOME</a></li>
             <li><a href="#">Sales report</a></li>
             <li><a class="active" href="employinfor.php">Manage employees</a></li>
             <li><a href="managef.php">Food management</a></li>
@@ -257,24 +258,6 @@ if ($level != 'admin') {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            $('#datatableid').DataTable({
-                "pagingType": "full_numbers",
-                "lengthMenu": [
-                    [10, 25, 50, -1],
-                    [10, 25, 50, "All"]
-                ],
-                responsive: true,
-                language: {
-                    search: "_INPUT_",
-                    searchPlaceholder: "Search Your Data",
-                }
-            });
-        });
-    </script>
 
     <script>
     $(document).ready(function () {
