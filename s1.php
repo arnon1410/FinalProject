@@ -4,7 +4,8 @@
 FROM sales s
 LEFT OUTER JOIN sale_detail d ON d.SaleID=s.SaleID
 LEFT OUTER JOIN products p ON d.ProductID=p.ProductID
-LEFT OUTER JOIN login l ON l.username=s.username";  
+LEFT OUTER JOIN login l ON l.username=s.username
+ORDER BY SaleDate ";  
  $result = mysqli_query($connect, $query); 
  $query1 ="SELECT SUM(GrandTotal) as total
  FROM sales";
@@ -13,16 +14,15 @@ LEFT OUTER JOIN login l ON l.username=s.username";
  $total = array();
  ?>  
  <!DOCTYPE html>  
- <html>  
+ <html lang="en">  
       <head>  
-           <title>Search Date</title>  
+           <title>Three piggy cafe</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
            <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
       </head>  
 <body BGCOLOR = #55efc4> 
-           <br /><br />  
            <div class="container" style="width:900px;">  
                 <h2 align="center">ยอดขายของร้าน</h2>  
                 <h3 align="center">Three piggy cafe</h3><br />  

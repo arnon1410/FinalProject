@@ -11,8 +11,28 @@
 			LEFT OUTER JOIN products p ON d.ProductID=p.ProductID  
 			LEFT OUTER JOIN login l ON l.username=s.username  
            WHERE SaleDate ='".$_POST["from_date"]."' ";  
-      $result = mysqli_query($connect, $query);  
+      $result = mysqli_query($connect, $query); 
+	  $query1 ="SELECT SaleDate, SUM(GrandTotal) as total
+			FROM sales
+			WHERE SaleDate ='".$_POST["from_date"]."' 
+			GROUP BY SaleDate
+			";
+	  $result1 = mysqli_query($connect, $query1); 
+	  $result2 = mysqli_query($connect, $query1); 
+	  $total = array();
+	   
+                     while($rs = mysqli_fetch_array($result2)) 
+						{  
+						$total[] = "\"".$rs['$total']."\""; 
+						}
+						$total[] = implode(",", $total);
+                     
+					  
+                     while($rw = mysqli_fetch_array($result1)) 
+					 {
+					 
       $output .= '
+	  
            <table class="table table-bordered">  
                 <tr>  
                      <th width="20%">Date</th>  
@@ -23,14 +43,16 @@
                      <th width="12%">Name</th>
 					 
                 </tr>  
-				<tbody></tbody>
-						<tfoot> 
+						<tbody></tbody>
+						<tfoot>
 						<tr>
-						<th colspan="3">ยอดขายรายวัน</th>
-						<th id="total_order"></th>
+						<th colspan="3">ยอดขายทั้งหมด</th>
+						<td> '.number_format($rw["total"]).' ฿</td>
 						</tr>
-						</tfoot>	
-      ';  
+						</tfoot>
+					 							
+      '; 
+	  }	  
       if(mysqli_num_rows($result) > 0)  
       {  
            while($row = mysqli_fetch_array($result))  
@@ -46,7 +68,8 @@
                      </tr>  
 
                 ';  
-           }  
+           }
+			
       }  
       else  
       {  
