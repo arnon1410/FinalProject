@@ -2,8 +2,8 @@
 	session_start();
  
 	//check if product is already in the cart
-	if(!in_array($_GET['ProductID'], $_SESSION['cart'])){
-		array_push($_SESSION['cart'], $_GET['ProductID']);
+	if(!in_array($_GET['productid'], $_SESSION['cart'])){
+		array_push($_SESSION['cart'], $_GET['productid']);
 		$_SESSION['message'] = 'Product added to cart';
 	}
 	else{

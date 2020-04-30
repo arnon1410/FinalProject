@@ -2,7 +2,7 @@
 	session_start();
  
 	//remove the id from our cart array
-	$key = array_search($_GET['ProductID'], $_SESSION['cart']);	
+	$key = array_search($_GET['productid'], $_SESSION['cart']);	
 	unset($_SESSION['cart'][$key]);
  
 	unset($_SESSION['qty_array'][$_GET['index']]);

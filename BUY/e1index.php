@@ -42,7 +42,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Simple Shopping Cart</a>
+	      <a class="navbar-brand" href="#">Shopping Cart</a>
 	    </div>
  
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -85,11 +85,11 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="row product_name">
-							<h4><?php echo $row['ProductName']; ?></h4>
+							<h4><?php echo $row['productname']; ?></h4>
 						</div>
 						<div class="row product_footer">
-							<p class="pull-left"><b><?php echo $row['Price']; ?> ฿</b></p>
-							<span class="pull-right"><a href="e2add.php?ProductID=<?php echo $row['ProductID']; ?>" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Cart</a></span>
+							<p class="pull-left"><b><?php echo $row['price']; ?> ฿</b></p>
+							<span class="pull-right"><a href="e2add.php?productid=<?php echo $row['productid']; ?>" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Cart</a></span>
 						</div>
 					</div>
 				</div>
