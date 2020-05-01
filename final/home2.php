@@ -27,7 +27,7 @@ include('condb.php');
         <label class="logo">TPC®</label>
         <ul>
             <li><a class="active" href="home2.php">HOME</a></li>
-            <li><a href="#">Sales report</a></li>
+            <li><a href="circulation2.php">Sales report</a></li>
             <li><a href="employinfor.php">Manage employees</a></li>
             <li><a href="managef.php">DRINK MANAGEMENT</a></li>
             <li><a href="logout.php">Logout</a></li>
@@ -37,9 +37,9 @@ include('condb.php');
     <div class="post">
         <div class="post-s">
             <h2>
-                WELCOME
+            WELCOME
                   TO
-                THREE COFFE</h2>
+                THREE PIGGY CAFE</h2>
         </div>
     </section>
     

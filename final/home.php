@@ -28,7 +28,7 @@ include('condb.php');
         <ul>
             <li><a class="active" href="home.php">HOME</a></li>
             <li><a href="#">Order food</a></li>
-            <li><a href="#">Circulation</a></li>
+            <li><a href="circulation.php">Circulation</a></li>
             <li><a href="profile.php">Profile</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
@@ -39,7 +39,7 @@ include('condb.php');
             <h2>
                 WELCOME
                   TO
-                THREE COFFE</h2>
+                THREE PIGGY CAFE</h2>
         </div>
 
     </section>

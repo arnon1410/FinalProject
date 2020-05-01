@@ -33,9 +33,9 @@ if ($level != 'manager') {
         <label class="logo">TPC®</label>
         <ul>
             <li><a href="home3.php">HOME</a></li>
-            <li><a href="#">Sales report</a></li>
+            <li><a href="circulation3.php">Sales report</a></li>
             <li><a class="active" href="employinfor2.php">Manage employees</a></li>
-            <li><a href="managef2.php">Food management</a></li>
+            <li><a href="managef2.php">DRINK MANAGEMENT</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
 
