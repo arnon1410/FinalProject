@@ -1,8 +1,8 @@
 <?php  
  $connect = mysqli_connect("localhost", "coffee.f", "IoJOCjBp1QDiSqAz", "coffee.f");  
- $query = "SELECT s.SaleDate, d.SaleID, p.ProductName, d.Price, d.Quantity, l.name
+ $query = "SELECT s.SaleDate, s.SaleID, p.ProductName, d.Price, d.Quantity,d.Quantity, (d.Price*d.Quantity) as amount,  l.name
 FROM sales s
-LEFT OUTER JOIN sale_detail d ON d.SaleID=s.SaleID
+LEFT OUTER JOIN sale_details d ON s.SaleID=d.SaleID
 LEFT OUTER JOIN products p ON d.ProductID=p.ProductID
 LEFT OUTER JOIN login l ON l.username=s.username
 ORDER BY SaleDate ";  
@@ -42,6 +42,7 @@ ORDER BY SaleDate ";
                                <th width="43%">Product</th>  
                                <th width="10%">Price</th>  
                                <th width="12%">Quantity</th>  
+							   <th width="12%">Amount</th>  
 							   <th width="12%">Name</th>
                           </tr> 
 							
@@ -55,6 +56,7 @@ ORDER BY SaleDate ";
                                <td><?php echo $row["ProductName"]; ?></td>  
                                <td><?php echo $row["Price"]; ?> ฿</td>  
                                <td><?php echo $row["Quantity"]; ?></td>  
+							   <td><?php echo $row["amount"]; ?> ฿</td> 
 							    <td><?php echo $row["name"]; ?></td>  
                           </tr>
 							
