@@ -53,7 +53,7 @@ if ($level != 'manager') {
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-    <form action="insert1.php" method="POST">
+    <form action="insert1.1.php" method="POST">
         <div class="modal-body">
                 <div class="form-group">
                     <label>ID</label>
@@ -101,7 +101,7 @@ if ($level != 'manager') {
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-    <form action="update.php" method="POST">
+    <form action="update1.1.php" method="POST">
         <div class="modal-body">
                 <div class="form-group">
                     <label>ID</label>
@@ -151,7 +151,7 @@ if ($level != 'manager') {
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-    <form action="delete.php" method="POST">
+    <form action="delete1.1.php" method="POST">
         <div class="modal-body">
                 <div class="form-group">
                     <label>ID</label>

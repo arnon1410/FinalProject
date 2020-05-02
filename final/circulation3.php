@@ -59,7 +59,7 @@ include('condb.php');
     </nav>
     <section>
     <div class="container" style="width:900px;">  
-                <h2 align="center">CRICULATION</h2>  
+                <h2 align="center">SELES REPORT</h2>  
                 <h3 align="center">THREE PIGGY COFFE</h3><br />  
                 <div class="col-md-3">  
                      <input type="text" name="from_date" id="from_date" class="form-control" placeholder="ว/ด/ป" />  

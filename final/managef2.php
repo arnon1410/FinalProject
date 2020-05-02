@@ -50,7 +50,7 @@ include('condb.php');
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-    <form action="insert2.php" method="POST">
+    <form action="insert2.2.php" method="POST">
         <div class="modal-body">
                 <div class="form-group">
                     <label>ProductID</label>
@@ -86,7 +86,7 @@ include('condb.php');
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-    <form action="update2.php" method="POST">
+    <form action="update2.2.php" method="POST">
         <div class="modal-body">
         <div class="form-group">
                     <label>ProductID</label>
@@ -124,7 +124,7 @@ include('condb.php');
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-    <form action="delete2.php" method="POST">
+    <form action="delete2.2.php" method="POST">
         <div class="modal-body">
                 <div class="form-group">
                     <label>ProductID</label>
