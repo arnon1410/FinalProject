@@ -28,8 +28,8 @@ include('condb.php');
         <ul>
             <li><a class="active" href="home2.php">HOME</a></li>
             <li><a href="circulation2.php">Sales report</a></li>
-            <li><a href="employinfor.php">Manage employees</a></li>
-            <li><a href="managef.php">DRINK MANAGEMENT</a></li>
+            <li><a href="employinfor2.php">Manage employees</a></li>
+            <li><a href="managef2.php">DRINK MANAGEMENT</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </nav>

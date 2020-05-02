@@ -27,7 +27,7 @@ include('condb.php');
         <label class="logo">TPC®</label>
         <ul>
             <li><a class="active" href="home.php">HOME</a></li>
-            <li><a href="#">Order food</a></li>
+            <li><a href="orderf.php">Order food</a></li>
             <li><a href="circulation.php">Circulation</a></li>
             <li><a href="profile.php">Profile</a></li>
             <li><a href="logout.php">Logout</a></li>

@@ -51,7 +51,7 @@ include('condb.php');
         <label class="logo">TPC®</label>
         <ul>
             <li><a href="home.php">HOME</a></li>
-            <li><a href="#">Order food</a></li>
+            <li><a href="orderf.php">Order food</a></li>
             <li><a class="active" href="circulation.php">Circulation</a></li>
             <li><a  href="profile.php">Profile</a></li>
             <li><a href="logout.php">Logout</a></li>
@@ -59,7 +59,7 @@ include('condb.php');
     </nav>
     <section>
     <div class="container" style="width:900px;">  
-                <h2 align="center">CRICULATION</h2>  
+                <h2 align="center">CIRCULATION</h2>  
                 <h3 align="center">THREE PIGGY COFFE</h3><br />  
                 <div class="col-md-3">  
                      <input type="text" name="from_date" id="from_date" class="form-control" placeholder="ว/ด/ป" />  
