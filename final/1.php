@@ -17,7 +17,7 @@ include('condb.php');
 	$sql2	= "SELECT * FROM products WHERE productid = $id";
 	$result2	= mysqli_query($conn, $sql2);
 	$values	= mysqli_fetch_array($result2);
-	$total	= $total + ($values["Quantity"] * $values["Price"]);
+	$total	= $total + ($values["Quantity"] * $values["price"]);
 	$sql3 = "INSERT INTO sale_details (productid, price, Quantity)
 			 VALUES ('$id', '$Price', '$qty')";
 	$result3 = mysqli_query($conn, $sql3) or die ("Error in query: $sql3 " . mysqli_error());

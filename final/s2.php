@@ -8,7 +8,7 @@
      date_default_timezone_set('Asia/Bangkok');
       $output = '';  
       $query = "  
-           SELECT s.SaleDate, d.SaleID, p.productname, d.price, d.Quantity, l.name
+           SELECT s.SaleDate, d.SaleID, p.productname, d.price, d.Quantity, (d.Price*d.Quantity) as amount, l.name
 			FROM sales s
 			LEFT OUTER JOIN sale_details d ON d.SaleID=s.SaleID
 			LEFT OUTER JOIN products p ON d.productid=p.productid  
@@ -42,14 +42,15 @@
                 <th width="15%">SaleID</th>  
                 <th width="20%">Product</th>  
                 <th width="10%">Price</th>  
-                <th width="10%">Quantity</th>  
+                <th width="10%">Quantity</th>
+                <th width="12%">Amount</th>
                 <th width="12%">Name Employ</th>
 					 
                 </tr>  
 						<tbody></tbody>
 						<tfoot>
 						<tr>
-						<th colspan="3">ยอดขายทั้งหมด</th>
+						<th colspan="3">TOTAL AMOUNT</th>
 						<td> '.number_format($rw["total"]).' ฿</td>
 						</tr>
 						</tfoot>
@@ -67,7 +68,8 @@
                           <td>'. $row["productname"] .'</td>  
                           <td> '. $row["price"] .' ฿</td>  
                           <td>'. $row["Quantity"] .'</td>  
-						   <td>'. $row["name"] .'</td>
+                          <td> '. $row["amount"] .' ฿</td> 
+					 <td>'. $row["name"] .'</td>
                      </tr>  
 
                 ';  

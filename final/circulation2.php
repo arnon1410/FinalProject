@@ -13,7 +13,7 @@ include('condb.php');
      mysqli_query($con, "SET NAMES 'utf8' ");
      error_reporting( error_reporting() & ~E_NOTICE );
      date_default_timezone_set('Asia/Bangkok');
-     $query = "SELECT s.SaleDate, d.SaleID, p.productname, d.price, d.Quantity, l.name
+     $query = "SELECT s.SaleDate, d.SaleID, p.productname, d.price, d.Quantity, (d.Price*d.Quantity) as amount, l.name
      FROM sales s
      LEFT OUTER JOIN sale_details d ON d.SaleID=s.SaleID
      LEFT OUTER JOIN products p ON d.productid=p.productid
@@ -48,7 +48,7 @@ include('condb.php');
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">TPC®</label>
+        <label class="logo">Admin : <?php echo$name?> </label>
         <ul>
             <li><a href="home2.php">HOME</a></li>
             <li><a class="active" href="circulation2.php">Sales report</a></li>
@@ -76,8 +76,9 @@ include('condb.php');
                                <th width="15%">SaleID</th>  
                                <th width="20%">Product</th>  
                                <th width="10%">Price</th>  
-                               <th width="10%">Quantity</th>  
-							   <th width="12%">Name Employ</th>
+                               <th width="10%">Quantity</th>
+                               <th width="12%">Amount</th>  
+						 <th width="12%">Name Employ</th>
                           </tr> 
 							
                      <?php  
@@ -89,8 +90,9 @@ include('condb.php');
                                <td><?php echo $row["SaleID"]; ?></td>  
                                <td><?php echo $row["productname"]; ?></td>  
                                <td><?php echo $row["price"]; ?> ฿</td>  
-                               <td><?php echo $row["Quantity"]; ?></td>  
-							    <td><?php echo $row["name"]; ?></td>  
+                               <td><?php echo $row["Quantity"]; ?></td> 
+                               <td><?php echo $row["amount"]; ?> ฿</td> 
+						 <td><?php echo $row["name"]; ?></td>  
                           </tr>
 							
                      <?php  
@@ -110,7 +112,7 @@ include('condb.php');
 						<tbody></tbody>
 						<tfoot>
 						<tr>
-						<th colspan="3">ยอดขายทั้งหมด</th>
+						<th colspan="3">TOTAL AMOUNT</th>
 						<td><?php echo number_format($rw["total"]); ?>฿</td>
 						</tr>
 						</tfoot>

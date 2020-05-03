@@ -31,7 +31,7 @@ include('condb.php');
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">TPC®</label>
+        <label class="logo">Staff : <?php echo$name?> </label>
         <ul>
             <li><a href="home.php">HOME</a></li>
             <li><a href="orderf.php">Order food</a></li>

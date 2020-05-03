@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 02, 2020 at 04:38 AM
+-- Generation Time: May 03, 2020 at 02:43 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.29
 
@@ -68,10 +68,10 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`ID`, `username`, `password`, `name`, `level`, `gender`) VALUES
-(61401, 'C61401', '1111', 'เจน', 'staff', 'F'),
-(61402, 'C61402', '2222', 'นุ่น', 'staff', 'F'),
-(61403, 'C61403', '3333', 'โบว์', 'admin', 'F'),
-(61404, 'C61404', '4444', 'มาร์ค', 'manager', 'M');
+(61401, 'C61401', '1111', 'Jane', 'staff', 'F'),
+(61402, 'C61402', '2222', 'Noon', 'staff', 'F'),
+(61403, 'C61403', '3333', 'Bo', 'admin', 'F'),
+(61404, 'C61404', '4444', 'Mark', 'manager', 'M');
 
 -- --------------------------------------------------------
 
@@ -108,10 +108,8 @@ INSERT INTO `products` (`productid`, `productname`, `price`, `productdetail`) VA
 (15, 'สตรอเบอร์รี่ชีสเค้ก', 70, ''),
 (16, 'น้ำลิ้นจี่', 45, ''),
 (17, 'น้ำสตรอเบอร์รี่ปั่น', 55, ''),
-(18, 'น้ำกีวี', 55, ''),
-(19, 'น้ำมิกซ์เบอร์รี่', 55, ''),
-(20, 'โยเกิร์ตสมูทตี้', 65, ''),
-(21, 'นมเย็น', 25, '');
+(18, 'น้ำกีวี', 50, ''),
+(19, 'นมเย็น', 20, '');
 
 -- --------------------------------------------------------
 
@@ -131,9 +129,17 @@ CREATE TABLE `sales` (
 --
 
 INSERT INTO `sales` (`SaleID`, `SaleDate`, `username`, `GrandTotal`) VALUES
-(1, '2020-05-02', 'C61401', 50),
-(2, '2020-05-02', 'C61401', 70),
-(3, '2020-05-02', 'C61402', 60);
+(2, '2020-05-02', 'C61401', 55),
+(4, '2020-05-02', 'C61401', 100),
+(5, '2020-05-02', 'C61401', 140),
+(6, '2020-05-02', 'C61401', 240),
+(7, '2020-05-02', 'C61401', 500),
+(8, '2020-05-02', 'C61401', 100),
+(9, '2020-05-02', 'C61401', 140),
+(10, '2020-05-02', 'C61401', 55),
+(11, '2020-05-02', 'C61401', 120),
+(12, '2020-05-03', 'C61401', 100),
+(13, '2020-05-03', 'C61401', 140);
 
 -- --------------------------------------------------------
 
@@ -145,7 +151,7 @@ CREATE TABLE `sale_details` (
   `SaleID` int(11) NOT NULL,
   `productid` int(11) NOT NULL,
   `price` float NOT NULL,
-  `Quantity` int(11) NOT NULL
+  `Quantity` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -153,9 +159,17 @@ CREATE TABLE `sale_details` (
 --
 
 INSERT INTO `sale_details` (`SaleID`, `productid`, `price`, `Quantity`) VALUES
-(1, 2, 50, 1),
-(2, 5, 70, 1),
-(3, 3, 60, 1);
+(2, 1, 55, 1),
+(4, 8, 50, 1),
+(5, 5, 70, 1),
+(6, 5, 70, 2),
+(7, 2, 50, 1),
+(8, 2, 50, 1),
+(9, 15, 70, 1),
+(10, 12, 55, 1),
+(11, 3, 60, 1),
+(12, 8, 50, 1),
+(13, 5, 70, 1);
 
 -- --------------------------------------------------------
 
@@ -187,6 +201,12 @@ ALTER TABLE `login`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`productid`);
+
+--
 -- Indexes for table `sales`
 --
 ALTER TABLE `sales`
@@ -212,19 +232,25 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61412;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61405;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `productid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `sales`
 --
 ALTER TABLE `sales`
-  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `sale_details`
 --
 ALTER TABLE `sale_details`
-  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `SaleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -30,7 +30,7 @@ if ($level != 'admin') {
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">TPC®</label>
+        <label class="logo">Admin : <?php echo$name?> </label>
         <ul>
             <li><a href="home2.php">HOME</a></li>
             <li><a href="circulation2.php">Sales report</a></li>
@@ -55,10 +55,6 @@ if ($level != 'admin') {
                     </div>
     <form action="insert1.php" method="POST">
         <div class="modal-body">
-                <div class="form-group">
-                    <label>ID</label>
-                    <input type="text" name="ID" class="form-control" placeholder="Enter id">
-                </div>
                 <div class="form-group">
                     <label>Username</label>
                     <input type="text" name="username" class="form-control" placeholder="Enter username">

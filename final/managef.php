@@ -29,7 +29,7 @@ include('condb.php');
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">TPC®</label>
+        <label class="logo">Admin : <?php echo$name?> </label>
         <ul>
         <ul>
             <li><a href="home2.php">HOME</a></li>
@@ -54,16 +54,12 @@ include('condb.php');
     <form action="insert2.php" method="POST">
         <div class="modal-body">
                 <div class="form-group">
-                    <label>ProductID</label>
-                    <input type="text" name="productid" class="form-control" placeholder="Enter id">
-                </div>
-                <div class="form-group">
                     <label>ProductName</label>
-                    <input type="text" name="productname" class="form-control" placeholder="Enter username">
+                    <input type="text" name="productname" class="form-control" placeholder="Enter productusername">
                 </div>
                 <div class="form-group">
                     <label>Price</label>
-                    <input type="text" name="price" class="form-control" placeholder="Enter passsword">
+                    <input type="text" name="price" class="form-control" placeholder="Enter price">
                 </div>
         </div>
         <div class="modal-footer">

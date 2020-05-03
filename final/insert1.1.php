@@ -16,8 +16,8 @@ if(isset($_POST['insertdata']))
 
     $sql="INSERT INTO login( `ID`,`username`,`password`,`name`,`level`,`gender`) VALUES('$ID','$username','$password','$name','$level','$gender')";
     $result = mysqli_query($con,$sql);
-
-    if($result)
+    $lastid = $row['ID'];
+    if($lastid == " ")
     {
         echo '<script> alert("Data Saved"); </script>';
         header('Location: employinfor2.php');

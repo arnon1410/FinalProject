@@ -26,7 +26,7 @@ include('condb.php');
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo" href="home3.php">TPC®</label>
+        <label class="logo" href="home3.php">Manager : <?php echo$name?> </label>
         <ul>
             <li><a class="active" href="home3.php">HOME</a></li>
             <li><a href="circulation3.php">Sales report</a></li>

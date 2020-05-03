@@ -3,7 +3,7 @@
      mysqli_query($con, "SET NAMES 'utf8' ");
      error_reporting( error_reporting() & ~E_NOTICE );
      date_default_timezone_set('Asia/Bangkok');
-     $query = "SELECT s.SaleDate, d.SaleID, p.productname, d.price, d.Quantity, l.name
+     "SELECT s.SaleDate, s.SaleID, p.ProductName, d.Price, d.Quantity,d.Quantity, (d.Price*d.Quantity) as amount,  l.name
      FROM sales s
      LEFT OUTER JOIN sale_details d ON d.SaleID=s.SaleID
      LEFT OUTER JOIN products p ON d.productid=p.productid
@@ -45,7 +45,8 @@
                                <th width="20%">Product</th>  
                                <th width="10%">Price</th>  
                                <th width="10%">Quantity</th>  
-							   <th width="12%">Name Employ</th>
+                               <th width="12%">Amount</th>  
+						 <th width="12%">Name Employ</th>
                           </tr> 
 							
                      <?php  
@@ -58,7 +59,8 @@
                                <td><?php echo $row["productname"]; ?></td>  
                                <td><?php echo $row["price"]; ?> ฿</td>  
                                <td><?php echo $row["Quantity"]; ?></td>  
-							    <td><?php echo $row["name"]; ?></td>  
+                               <td><?php echo $row["amount"]; ?> ฿</td> 
+						 <td><?php echo $row["name"]; ?></td>  
                           </tr>
 							
                      <?php  
